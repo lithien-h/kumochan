@@ -25,15 +25,30 @@ function drawPost(post, xpos, ypos) {
 	// ...and use them to make the container
 	var container = kumo.ellipse(width, height).fill("#444444").center(0, 0).back();
 	
-	var post = kumo.group().add(container).add(content).center(xpos, ypos);
+	var finalPost = kumo.group().add(container).add(content).dmove(xpos, ypos); // dmove is used because weird stuff happens using centre()
 }
 
-var test1 = new post("1234567890", "this is a test string!", "timestamp");
-var test2 = new post("1234567891", "this is another test string!\nthis second line is long, so the ellipse is wider!", "timestamp");
-var test3 = new post("1234567892", "this is a tall string!\nss\nss\nss\nss\nss\nss\nss\nss\nss\nss\nss", "timestamp");
-var test4 = new post("1234567893", "it might look better to keep a set ratio so each ellipse is the same shape.", "timestamp");
+var test1 = new post(
+"1234567890",
+"this is a test string, placed right in the middle!\nwe can put the OP post here",
+"timestamp");
 
-drawPost(test1, 500, 250);
-drawPost(test2, 750, 500);
-drawPost(test3, 1000, 250);
-drawPost(test4, 1000, 750);
+var test2 = new post(
+"1234567891",
+"this ellipse is trying to hide at 0,0.",
+"timestamp");
+
+var test3 = new post(
+"1234567892",
+"this is a tall string!\nss\nss\nss\nss\nss\nss\nss\nss\nss\nss\nss",
+"timestamp");
+
+var test4 = new post(
+"1234567893",
+"all ellipses have a minimum size for consistency, but\nthey get bigger if lines are too long.\naaaaaaaaaaaaaaaaaaaaaaaaaaaaa\naaaaaaaaaaaaaaaaaaaa\nthis looks bad.",
+"timestamp");
+
+drawPost(test1, window.innerWidth / 2, window.innerHeight / 2); // placed at the dead centre of the screen
+drawPost(test2, 0, 0);
+drawPost(test3, window.innerWidth / 4, 750);
+drawPost(test4, 3 * window.innerWidth / 4, 750);
