@@ -1,0 +1,9 @@
+body {
+	margin: 0px;
+}
+
+#kumochan {
+	width: 100%;
+	height: 100%;
+/* have kumochan fill up the whole page, no matter the window size */
+}
