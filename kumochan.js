@@ -30,7 +30,7 @@ function drawPost(post, xpos, ypos) {
 
 var test1 = new post(
 "1234567890",
-"this is a test string, placed right in the middle!\nwe can put the OP post here",
+"this is a test string, placed right in the middle!\nwe can put the OP post here maybe",
 "timestamp");
 
 var test2 = new post(
