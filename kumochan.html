@@ -3,24 +3,17 @@
 <head>
 <title>SPIDErwebs!!</title>
 <link rel="stylesheet" type="text/css" href="style.css"></link>
+<script src="svg.min.js"></script> <!-- documentation here http://svgjs.com/ -->
+<script src="functions.js"></script>
+<script src="grabber.js"></script> <!-- 4chan scraper: https://github.com/4chan/4chan-API -->
 </head>
 
 <body>
-
 <div id="kumochan"></div>
-
 </body>
+
 <footer>
-
-<script src="svg.min.js"></script>
-<!-- an SVG library that makes controlling graphics way easier for us.
-at first i didn't really want to use any external libraries for this but it makes what takes 10 lines just 2.
-documentation here http://svgjs.com/ -->
-
-<script src="kumochan.js"></script>
-<!-- here's our own script for drawing kumochan!! -->
-
-<!-- we should probably have a separate script that controls grabbing data from 4chan -->
-
+<script src="kumochan.js"></script> <!-- draws kumochan: it's down here so that it is only run after all the other scripts have are done. -->
 </footer>
+
 </html>
